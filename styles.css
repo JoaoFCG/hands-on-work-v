@@ -1,0 +1,251 @@
+/* Variáveis */
+:root {
+  --bordo:#58151C;
+  --bordo-escuro:#2C0B0E;
+  --bordo-claro:#B02A37;
+  --creme:#FFE69C;
+  --cinza:#D9D9D9;
+  --azul: #084298;
+  --branco:#FFFFFF;
+  --preto:#000000;
+  --fonte:"Inter";
+}
+
+/* Configurações Base */
+body {
+  scroll-margin-top: 100px;
+  background-color: var(--creme);
+  font-family: var(--fonte);
+  font-size: 16px;
+  font-weight: 400;
+  margin: 0px;
+}
+
+a {
+  color: var(--azul);
+}
+
+/* Cabeçalho */
+.cabecalho__container {
+  display: flex;
+  position: fixed;
+  height: 100px;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+  background-color: var(--bordo);
+  color: var(--branco);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+li {
+  display: flex;
+  float:left;
+  padding-left: 23px;
+  padding-right: 23px;
+  align-items: center;
+  height: 50px;
+  text-align: center;
+  border-right: 1px solid var(--bordo-claro);
+}
+
+li:last-of-type {
+  border-right: 0px;
+}
+
+.cabecalho__item {
+  color: var(--branco);
+  font-weight: 400;
+  text-decoration: none;
+}
+
+.cabecalho__item:hover {
+  color: var(--creme);
+}
+
+.cabecalho__titulo {
+  font-size: 28px;
+  font-weight: 600;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);;
+}
+
+/* Home */
+.home__container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.home__imagem {
+  width: 100%;
+}
+
+* {box-sizing:border-box}
+
+/* Seções */
+.secao__container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+  padding: 68px;
+}
+
+.secao__texto {
+  width: 55%;
+  font-weight: 400;
+}
+
+.secao__titulo {
+  margin: 0px;
+  color: var(--bordo);
+  font-size: 40px;
+  font-weight: 700;
+}
+
+.secao__imagem {
+  width: 42%;
+}
+
+/* Seções de Fundo Escuro */
+.container__alt {
+  background-color: var(--bordo-escuro);
+  color: var(--branco);
+  font-weight: 400;
+}
+
+.titulo__alt {
+  color: var(--creme);
+}
+
+/* Galeria */
+.galeria__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 68px;
+  background-color: var(--bordo-escuro);
+}
+
+.titulo__galeria {
+  color: var(--creme);
+  margin-bottom: 16px;
+}
+
+/* Contêiner do slideshow */
+.slideshow-container {
+  max-width: 600px;
+  position: relative;
+  margin: auto;
+}
+
+/* Esconder imagens por padrão */
+.mySlides {
+  display: none;
+}
+
+/* Botões de anterior e próximo */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  text-shadow: 
+  -1px -1px 0 #000,
+  1px -1px 0 #000,
+  -1px 1px 0 #000,
+  1px 1px 0 #000;
+}
+
+/* Posiciona o botão de próximo à direira */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* Ao passar o mouse, insere um fundo preto translúcido */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Texto da legenda */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+  text-shadow: 
+  -1px -1px 0 #000,
+  1px -1px 0 #000,
+  -1px 1px 0 #000,
+  1px 1px 0 #000;
+}
+
+/* Texto do número (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+  text-shadow: 
+  -1px -1px 0 #000,
+  1px -1px 0 #000,
+  -1px 1px 0 #000,
+  1px 1px 0 #000;
+}
+
+/* Indicador em ponto */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Animação de transição */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+/* Rodapé */
+.rodape__container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  width: 100%;
+  justify-content: space-between;
+  padding: 68px;
+  background-color: var(--cinza);
+}
+
+.rodape__logo {
+  align-self: center;
+}
